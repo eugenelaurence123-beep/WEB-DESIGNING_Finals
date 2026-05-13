@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Famous Website's Buttons</title>
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+/* SMOOTH HOVER */
+button{
+    transition:all 0.2s ease;
+}
+
+/* BODY */
+body{
+    height:100vh;
+
+    /* LIGHT GRAY BACKGROUND */
+    background:linear-gradient(
+        135deg,
+        #f5f5f5,
+        #e2e2e2
+    );
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* MAIN CONTAINER */
+.container{
+    width:950px;
+
+    background:white;
+
+    padding:40px;
+
+    border-radius:25px;
+
+    box-shadow:0 0 25px rgba(0,0,0,0.12);
+}
+
+/* TITLE */
+.container h1{
+    color:#222;
+    font-size:48px;
+    margin-bottom:10px;
+}
+
+/* SUBTEXT */
+.container p{
+    color:#666;
+    margin-bottom:35px;
+    font-size:18px;
+}
+
+/* TOP BUTTON ROW */
+.top-row{
+    display:flex;
+    gap:20px;
+    margin-bottom:20px;
+}
+
+/* CARD BOX */
+.box{
+    flex:1;
+
+    background:#f3f3f3;
+
+    padding:14px;
+
+    border-radius:10px;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* SECOND ROW */
+.middle-row{
+    width:48%;
+    margin-bottom:20px;
+}
+
+/* LAST ROW */
+.bottom-row{
+    width:100%;
+}
+
+/* ========================= */
+/* BUTTONS */
+/* ========================= */
+
+/* UBER */
+.uber-btn{
+    background:black;
+    color:white;
+    border:none;
+
+    width:155px;
+    height:55px;
+
+    font-size:20px;
+    cursor:pointer;
+}
+
+/* AMAZON */
+.amazon-btn{
+    background:rgb(255,216,20);
+    color:black;
+    border:none;
+
+    width:405px;
+    height:72px;
+
+    border-radius:36px;
+
+    font-size:22px;
+    cursor:pointer;
+}
+
+/* GITHUB */
+.github-btn{
+    background:rgb(46,164,79);
+    color:white;
+    border:none;
+
+    width:160px;
+    height:55px;
+
+    border-radius:8px;
+
+    font-size:22px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* BOOTSTRAP */
+.bootstrap1{
+    background:rgb(121,82,179);
+    color:white;
+    border:none;
+
+    padding:15px 35px;
+
+    border-radius:12px;
+
+    font-size:20px;
+    font-weight:bold;
+
+    margin-right:10px;
+    cursor:pointer;
+}
+
+.bootstrap2{
+    background:white;
+    color:rgb(108,117,125);
+
+    border:2px solid #cfd4da;
+
+    padding:15px 35px;
+
+    border-radius:12px;
+
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* LINKEDIN */
+.linkedin1{
+    background:rgb(10,102,194);
+    color:white;
+    border:none;
+
+    padding:18px 170px;
+
+    border-radius:40px;
+
+    font-size:20px;
+    font-weight:bold;
+
+    margin-right:15px;
+    cursor:pointer;
+}
+
+.linkedin2{
+    background:white;
+    color:rgb(10,102,194);
+
+    border:2px solid rgb(10,102,194);
+
+    padding:16px 45px;
+
+    border-radius:40px;
+
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+/* ========================= */
+/* HOVER EFFECTS */
+/* ========================= */
+
+/* UBER */
+.uber-btn:hover{
+    opacity:0.8;
+}
+
+/* AMAZON */
+.amazon-btn:hover{
+    background:rgb(245,205,3);
+}
+
+/* GITHUB */
+.github-btn:hover{
+    box-shadow:0 0 10px rgba(46,164,79,0.4);
+}
+
+/* BOOTSTRAP */
+.bootstrap1:hover{
+    background:rgb(101,62,159);
+}
+
+.bootstrap2:hover{
+    background:rgb(108,117,125);
+    color:white;
+}
+
+/* LINKEDIN */
+.linkedin1:hover{
+    background:rgb(0,85,170);
+}
+
+.linkedin2:hover{
+    border-width:3px;
+    background:rgba(10,102,194,0.05);
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Famous Website's Button</h1>
+
+    <p>
+        Uber, Amazon, GitHub, Bootstrap, and LinkedIn button styles
+    </p>
+
+    <!-- TOP ROW -->
+    <div class="top-row">
+
+        <div class="box">
+            <button class="uber-btn">
+                Request now
+            </button>
+        </div>
+
+        <div class="box">
+            <button class="amazon-btn">
+                Add to Cart
+            </button>
+        </div>
+
+        <div class="box">
+            <button class="github-btn">
+                Sign up
+            </button>
+        </div>
+
+    </div>
+
+    <!-- MIDDLE ROW -->
+    <div class="middle-row box">
+
+        <button class="bootstrap1">
+            Get started
+        </button>
+
+        <button class="bootstrap2">
+            Download
+        </button>
+
+    </div>
+
+    <!-- BOTTOM ROW -->
+    <div class="bottom-row box">
+
+        <button class="linkedin1">
+            Apply on company website
+        </button>
+
+        <button class="linkedin2">
+            Save
+        </button>
+
+    </div>
+
+</div>
+
+</body>
+</html>

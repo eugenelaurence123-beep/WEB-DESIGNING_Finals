@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AniFunkMyHeroPage</title>
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="https://img.icons8.com/pulsar-line/48/anime.png">
+
+<!-- GOOGLE FONT -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+/* RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+/* BODY */
+body{
+    font-family:"Inter",sans-serif;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+
+    color:white;
+
+    background:#0b0b0b;
+}
+
+/* BACKGROUND GIF */
+
+.hero-bg{
+    position:fixed;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    z-index:-3;
+
+    filter:brightness(0.35);
+}
+
+/* DARK OVERLAY */
+
+.overlay{
+    position:fixed;
+    inset:0;
+
+    background:
+    linear-gradient(
+        rgba(20,20,20,0.70),
+        rgba(10,10,10,0.88)
+    );
+
+    z-index:-2;
+}
+
+/* LIGHT GLOW */
+
+.glow{
+    position:fixed;
+    inset:0;
+
+    background:
+    radial-gradient(
+        circle at top left,
+        rgba(255,255,255,0.05),
+        transparent 35%
+    );
+
+    z-index:-1;
+}
+
+/* NAVBAR */
+
+.navbar{
+    width:100%;
+
+    position:fixed;
+    top:0;
+    left:0;
+
+    padding:20px 8%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    background:rgba(0,0,0,0.30);
+
+    backdrop-filter:blur(10px);
+
+    border-bottom:1px solid rgba(255,255,255,0.05);
+
+    z-index:100;
+}
+
+.logo{
+    font-size:1.3rem;
+
+    font-weight:600;
+
+    letter-spacing:2px;
+
+    color:white;
+}
+
+/* HERO */
+
+.hero{
+    min-height:100vh;
+
+    display:flex;
+    justify-content:flex-start;
+    align-items:center;
+
+    padding:120px 8%;
+}
+
+/* CONTENT */
+
+.hero-content{
+    width:100%;
+    max-width:500px;
+}
+
+/* CARD */
+
+.hero-card{
+    background:rgba(20,20,20,0.72);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:24px;
+
+    overflow:hidden;
+
+    backdrop-filter:blur(8px);
+
+    box-shadow:
+    0 10px 40px rgba(0,0,0,0.45);
+}
+
+/* IMAGE */
+
+.card-image{
+    width:100%;
+}
+
+.card-image img{
+    width:100%;
+
+    display:block;
+
+    object-fit:cover;
+}
+
+/* TEXT */
+
+.card-content{
+    padding:24px;
+}
+
+.tag{
+    display:inline-block;
+
+    padding:8px 16px;
+
+    background:rgba(255,255,255,0.08);
+
+    border-radius:999px;
+
+    font-size:0.80rem;
+
+    color:#d7d7d7;
+
+    margin-bottom:18px;
+}
+
+.hero-title{
+    font-size:2.8rem;
+
+    line-height:1.1;
+
+    margin-bottom:18px;
+}
+
+.hero-title span{
+    color:#c2c2c2;
+}
+
+.hero-description{
+    color:#bcbcbc;
+
+    line-height:1.8;
+
+    margin-bottom:28px;
+
+    font-size:0.96rem;
+}
+
+/* BUTTON */
+
+.hero-buttons{
+    display:flex;
+}
+
+.btn{
+    text-decoration:none;
+
+    padding:14px 28px;
+
+    border-radius:14px;
+
+    background:rgba(255,255,255,0.10);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    color:white;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:rgba(255,255,255,0.18);
+
+    transform:translateY(-2px);
+}
+
+/* STARS */
+
+.stars{
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+}
+
+.stars span{
+    position:absolute;
+
+    width:2px;
+    height:2px;
+
+    background:white;
+
+    border-radius:50%;
+
+    opacity:0.5;
+
+    animation:blink 4s infinite;
+}
+
+@keyframes blink{
+
+    0%,100%{
+        opacity:0.2;
+    }
+
+    50%{
+        opacity:1;
+    }
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+    .hero{
+        justify-content:center;
+        padding-top:120px;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero-title{
+        font-size:2.2rem;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- BACKGROUND -->
+<img
+src="https://i.makeagif.com/media/8-20-2023/AUKMj5.gif"
+class="hero-bg"
+alt="Background GIF">
+
+<div class="overlay"></div>
+<div class="glow"></div>
+
+<!-- STARS -->
+<div class="stars">
+
+    <span style="top:10%;left:20%;"></span>
+    <span style="top:20%;left:70%;"></span>
+    <span style="top:35%;left:50%;"></span>
+    <span style="top:70%;left:80%;"></span>
+    <span style="top:85%;left:15%;"></span>
+
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+
+    <div class="logo">
+        AniFunkMyHeroPage
+    </div>
+
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+
+    <div class="hero-content">
+
+        <!-- CARD -->
+        <div class="hero-card">
+
+            <!-- IMAGE -->
+            <div class="card-image">
+
+                <img
+                src="https://i.ytimg.com/vi/yLTGHjfenJM/hq720.jpg?sqp=-oaymwEhCK4FEIIDSFryq4qpAxMIARUAAAAAGAElAADIQj0AgKJD&rs=AOn4CLBDjtX64vkuAlbGSiWeyUkyfwYlxg"
+                alt="Anime Image">
+
+            </div>
+
+            <!-- TEXT -->
+            <div class="card-content">
+
+                <div class="tag">
+                    Dark • Mystery • Anime
+                </div>
+
+                <h1 class="hero-title">
+                    Welcome To <span>AniFunk</span>
+                </h1>
+
+                <p class="hero-description">
+                    A dark anime inspired webpage with mysterious
+                    vibes, glowing atmosphere, and aesthetic visuals
+                    made for anime lovers.
+                </p>
+
+                <div class="hero-buttons">
+
+                    <a href="#" class="btn">
+                        All For One
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</body>
+</html>

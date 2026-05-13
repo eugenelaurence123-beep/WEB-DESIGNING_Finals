@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Compilation Site</title>
+
+<!-- FAVICON -->
+<link rel="icon" type="image/png" href="https://img.icons8.com/pulsar-line/48/anime.png">
+
+<style>
+
+/* BASIC RESET */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, sans-serif;
+}
+
+body{
+    background:#111;
+    color:white;
+}
+
+/* PAGES */
+.page{
+    display:none;
+    min-height:100vh;
+    padding:40px;
+}
+
+.active{
+    display:block;
+}
+
+/* NAV */
+.nav{
+    position:fixed;
+    bottom:20px;
+    left:50%;
+    transform:translateX(-50%);
+
+    display:flex;
+    gap:10px;
+}
+
+.nav button{
+    padding:10px 15px;
+    border:none;
+    cursor:pointer;
+    border-radius:8px;
+    background:#333;
+    color:white;
+}
+
+/* PAGE 1 (NO EFFECTS) */
+.btn{
+    padding:20px;
+    margin:10px;
+    background:#ddd;
+    border:none;
+}
+
+/* PAGE 2 (WITH EFFECTS) */
+.btn2{
+    padding:20px;
+    margin:10px;
+    background:#4a90e2;
+    border:none;
+    color:white;
+    cursor:pointer;
+}
+
+.btn2:hover{
+    transform:scale(1.05);
+    box-shadow:0 5px 15px rgba(0,0,0,0.4);
+}
+
+/* PAGE 3 */
+.page3{
+    background:#000;
+}
+
+.page3 img{
+    width:300px;
+}
+
+iframe{
+    width:100%;
+    height:150px;
+}
+
+/* PAGE 4 */
+.page4 img{
+    width:400px;
+}
+
+/* PAGE 5 LOGIN */
+.login-box{
+    width:300px;
+    margin:auto;
+    padding:20px;
+    background:#222;
+    border-radius:10px;
+}
+
+input{
+    width:100%;
+    margin:10px 0;
+    padding:10px;
+}
+
+.success{
+    display:none;
+    width:100%;
+    height:100vh;
+}
+
+.success img{
+    width:100%;
+    height:100%;
+    object-fit:cover;
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- ================= PAGE 1 ================= -->
+<div class="page active" id="page1">
+    <h2>Page 1 - Basic Buttons</h2>
+
+    <button class="btn">Request</button>
+    <button class="btn">Cart</button>
+    <button class="btn">Sign Up</button>
+</div>
+
+<!-- ================= PAGE 2 ================= -->
+<div class="page" id="page2">
+    <h2>Page 2 - Styled Buttons</h2>
+
+    <button class="btn2">Uber</button>
+    <button class="btn2">Amazon</button>
+    <button class="btn2">GitHub</button>
+</div>
+
+<!-- ================= PAGE 3 ================= -->
+<div class="page page3" id="page3">
+    <h2>AniFunk Page</h2>
+
+    <img src="https://cdn.shopify.com/s/files/1/0568/2298/8958/files/black_deku_tranformation.jpg?v=1731778053">
+
+    <iframe
+    src="https://w.soundcloud.com/player/?url=https%3A//soundcloud.com/noisecanvas_hz/zero"
+    ></iframe>
+</div>
+
+<!-- ================= PAGE 4 ================= -->
+<div class="page page4" id="page4">
+    <h2>AniFunk My Hero Page</h2>
+
+    <img src="https://i.ytimg.com/vi/yLTGHjfenJM/hq720.jpg">
+</div>
+
+<!-- ================= PAGE 5 ================= -->
+<div class="page" id="page5">
+
+    <div class="login-box">
+
+        <h2>AnimeEgdey</h2>
+
+        <input id="email" placeholder="Email">
+        <input id="password" type="password" placeholder="Password">
+
+        <button onclick="login()">Login</button>
+
+    </div>
+
+    <div class="success" id="success">
+        <img src="https://i.pinimg.com/736x/44/07/91/44079103a2a31cdb1e07bbc42c1a4171.jpg">
+    </div>
+
+</div>
+
+<!-- NAV -->
+<div class="nav">
+    <button onclick="showPage(1)">1</button>
+    <button onclick="showPage(2)">2</button>
+    <button onclick="showPage(3)">3</button>
+    <button onclick="showPage(4)">4</button>
+    <button onclick="showPage(5)">5</button>
+</div>
+
+<script>
+
+/* PAGE SWITCH */
+function showPage(num){
+
+    let pages = document.querySelectorAll(".page");
+
+    pages.forEach(p => p.classList.remove("active"));
+
+    document.getElementById("page"+num).classList.add("active");
+
+}
+
+/* LOGIN ONLY ON PAGE 5 */
+function login(){
+
+    let email = document.getElementById("email").value;
+    let pass = document.getElementById("password").value;
+
+    if(email === "Eugene" && pass === "GwapoKO"){
+
+        document.querySelector(".login-box").style.display="none";
+        document.getElementById("success").style.display="block";
+
+    }else{
+        alert("Wrong!");
+    }
+
+}
+
+</script>
+
+</body>
+</html>
